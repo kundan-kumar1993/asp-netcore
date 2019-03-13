@@ -1,3 +1,11 @@
+#!groovy
+@Library('utils')
+
+import no.evry.Config
+import no.evry.Docker
+import no.evry.Git
+
+properties([[$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', numToKeepStr: '60']]])
 node {
    def app
    def DOCKER_REGISTRY = 'https://registry.hub.docker.com';
