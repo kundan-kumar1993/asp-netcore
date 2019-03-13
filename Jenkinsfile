@@ -1,5 +1,4 @@
 #!groovy
-@Library('utils')
 
 import no.evry.Config
 import no.evry.Docker
