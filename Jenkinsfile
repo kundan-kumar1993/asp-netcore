@@ -1,5 +1,4 @@
-node {
-    def app
+pipeline {
     environment {
         registry = "kundanr26/aspnet-core-test1"
         registryCredential = 'dockerhub'
@@ -35,7 +34,7 @@ node {
         }
 
         stage('Test Image') {
-            app.inside {
+            steps {
                 sh 'echo "Tests passed"'
             }
         }
