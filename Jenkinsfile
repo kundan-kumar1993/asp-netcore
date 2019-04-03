@@ -6,7 +6,9 @@ pipeline {
     }
     stages {
         stage('Checkout SCM') {
-            checkout scm
+            steps {
+                git 'https://github.com/kundan-kumar1993/asp-netcore'
+            }
         }
 
         stage('Building Image') {
