@@ -1,6 +1,4 @@
-    #!groovy
-
-    node {
+node {
     def app
     environment {
         registry = "kundanr26/aspnet-core-test1"
